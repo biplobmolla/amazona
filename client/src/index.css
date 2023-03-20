@@ -18,14 +18,27 @@ header a {
   color: #fff;
 }
 
+.site-container {
+  min-height: 100vh;
+}
+
 main {
-  margin: 1rem;
+  flex: 1;
+}
+
+.btn-primary {
+  background-color: #f0c040 !important;
+  color: #000 !important;
 }
 
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.rating span {
+  color: #ffc000;
 }
 
 .product {
