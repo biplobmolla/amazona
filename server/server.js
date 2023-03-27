@@ -1,7 +1,14 @@
 import express from "express";
 import data from "./data.js";
+import mongoose from "mongoose";
 
 const app = express();
+app.use(express.json());
+
+mongoose
+  .connect("mongodb://127.0.0.1:27017/amazona")
+  .then(() => console.log("Connected to db"))
+  .catch((err) => console.log("Error: ", err.message));
 
 app.get("/api/products/", (req, res) => {
   res.send(data.products);
