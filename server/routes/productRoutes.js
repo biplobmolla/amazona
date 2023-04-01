@@ -15,7 +15,7 @@ productRouter.get("/product/:slug", async (req, res) => {
   } else {
     res.status(404).send({ message: "Product Not Found" });
   }
-  res.send(data.products);
+  res.send(data?.products);
 });
 
 productRouter.get("/:id", async (req, res) => {
